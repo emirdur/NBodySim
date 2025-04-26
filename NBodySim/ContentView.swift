@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var simulator = Simulator(n: 100)
+    @StateObject private var simulator = MTLSimulator(n: 100)
     
     var body: some View {
         VStack {
@@ -53,6 +53,11 @@ struct ContentView: View {
             }
             .frame(width: 500, height: 500)
             .background(Color.white)
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 1/60, repeats: true) { _ in
+                    simulator.update()
+                }
+            }
         }
     }
 }

@@ -18,6 +18,7 @@
 		CAD192B92DBD48B900DF0CDA /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD192B82DBD48B900DF0CDA /* Simulator.swift */; };
 		CAD192BB2DBD64FD00DF0CDA /* MetalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD192BA2DBD64FD00DF0CDA /* MetalManager.swift */; };
 		CAD192BD2DBD650A00DF0CDA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = CAD192BC2DBD650A00DF0CDA /* Shaders.metal */; };
+		CAD192BF2DBD9A5000DF0CDA /* MTLSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD192BE2DBD9A5000DF0CDA /* MTLSimulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CAD192B82DBD48B900DF0CDA /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		CAD192BA2DBD64FD00DF0CDA /* MetalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalManager.swift; sourceTree = "<group>"; };
 		CAD192BC2DBD650A00DF0CDA /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		CAD192BE2DBD9A5000DF0CDA /* MTLSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLSimulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				CAD192922DBD46C300DF0CDA /* Preview Content */,
 				CAD192B62DBD47E100DF0CDA /* Particle.swift */,
 				CAD192B82DBD48B900DF0CDA /* Simulator.swift */,
+				CAD192BE2DBD9A5000DF0CDA /* MTLSimulator.swift */,
 			);
 			path = NBodySim;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				CAD1928F2DBD46C200DF0CDA /* ContentView.swift in Sources */,
 				CAD192B72DBD47E100DF0CDA /* Particle.swift in Sources */,
 				CAD192B92DBD48B900DF0CDA /* Simulator.swift in Sources */,
+				CAD192BF2DBD9A5000DF0CDA /* MTLSimulator.swift in Sources */,
 				CAD192BB2DBD64FD00DF0CDA /* MetalManager.swift in Sources */,
 				CAD1928D2DBD46C200DF0CDA /* NBodySimApp.swift in Sources */,
 			);
