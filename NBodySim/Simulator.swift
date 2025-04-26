@@ -22,7 +22,7 @@ class Simulator: ObservableObject {
                     Float.random(in: 0..<500) // random y vector position
                 ),
                 velocity: SIMD2<Float>(
-                    Float.random(in: -10...10), // random x velocity [-1, 1]
+                    Float.random(in: -10...10), // random x velocity [-10, 10]
                     Float.random(in: -10...10) // random y velocity
                 ),
                 mass: Float(

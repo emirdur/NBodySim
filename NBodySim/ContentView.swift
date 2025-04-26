@@ -33,6 +33,22 @@ struct ContentView: View {
                         )),
                         with: .color(color)
                     )
+                    
+                    let velocityScale: CGFloat = 0.5
+                    let velocityEnd = CGPoint(
+                        x: position.x + CGFloat(particle.velocity.x) * velocityScale,
+                        y: position.y + CGFloat(particle.velocity.y) * velocityScale
+                    )
+                    
+                    var path = Path()
+                    path.move(to: position)
+                    path.addLine(to: velocityEnd)
+                    
+                    context.stroke(
+                        path,
+                        with: .color(.black),
+                        lineWidth: 1
+                    )
                 }
             }
             .frame(width: 500, height: 500)
