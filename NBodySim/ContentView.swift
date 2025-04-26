@@ -20,6 +20,10 @@ struct ContentView: View {
                         y: CGFloat(particle.position.y)
                     )
                     
+                    let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
+                    let normalizedMass = min(max(particle.mass / 10.0, 0.0), 1.0)
+                    let color = skyBlue.opacity(Double(normalizedMass))
+                    
                     context.fill(
                         Path(ellipseIn: CGRect(
                             x: position.x - circleSize / 2,
@@ -27,7 +31,7 @@ struct ContentView: View {
                             width: circleSize,
                             height: circleSize
                         )),
-                        with: .color(.blue)
+                        with: .color(color)
                     )
                 }
             }
