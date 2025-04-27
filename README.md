@@ -13,10 +13,21 @@ F = \frac{G \cdot m_1 \cdot m_2}{r^2}
 $$
 
 Where:
-- \( F \) is the force between the bodies.
-- \( G \) is the gravitational constant.
-- \( m_1 \) and \( m_2 \) are the masses of the two particles.
-- \( r \) is the distance between the two particles.
+$$
+\text{- } F \text{ is the force between the bodies.}
+$$
+
+$$
+\text{- } G \text{ is the gravitational constant.}
+$$
+
+$$
+\text{- } m_1 \text{ and } m_2 \text{ are the masses of the two particles.}
+$$
+
+$$
+\text{- } r \text{ is the distance between the two particles.}
+$$
 
 ### Tech Stack
 - **Swift**: Used for the app UI and logic.
@@ -36,11 +47,11 @@ The initial implementation is a CPU-based N-body simulation with 100 particles. 
 - **Simulation Performance**: While running, the CPU is highly utilized, which could slow down the system.
 
 ### Example Graphs:
-![Figure 1: CPU usage while running the simulation.](https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc)
-- **Figure 1**: CPU usage while running the simulation.
+- **Figure 1**: CPU usage while running the simulation.  
+  <img src="https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc" width="400" />
 
-![Figure 2: Screenshot of the N-body simulation.](https://github.com/user-attachments/assets/389f86e4-3fb9-474d-ae29-7295cd8d66bc)
-- **Figure 2**: Screenshot of the N-body simulation.
+- **Figure 2**: Screenshot of the N-body simulation.  
+  <img src="https://github.com/user-attachments/assets/389f86e4-3fb9-474d-ae29-7295cd8d66bc" width="400" />
 
 ---
 
@@ -56,8 +67,8 @@ In the second task, GPU acceleration is implemented using Metal to offload the c
 The CPU usage drops significantly when using GPU acceleration, and frame computation speeds improve dramatically.
 
 ### Example Graph:
-![Figure 3: CPU usage after GPU acceleration is implemented.](https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6)
-- **Figure 3**: CPU usage after GPU acceleration is implemented.
+- **Figure 3**: CPU usage after GPU acceleration is implemented.  
+  <img src="https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6" width="400" />
 
 ---
 
