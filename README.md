@@ -38,7 +38,7 @@ The initial implementation is a CPU-based N-body simulation with 100 particles. 
 ### Example Graphs:
 <img width="521" alt="Screenshot 2025-04-26 at 10 56 36 PM" src="https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc" />
 - **Figure 1**: CPU usage while running the simulation.
-![Simulator Screenshot - iPhone 14 Pro - 2025-04-26 at 20 50 33](https://github.com/user-attachments/assets/f9fff0f6-d972-4d3b-afa3-79601ea27e7e)
+<img width="364" alt="Screenshot 2025-04-26 at 10 59 40 PM" src="https://github.com/user-attachments/assets/389f86e4-3fb9-474d-ae29-7295cd8d66bc" />
 - **Figure 2**: Screenshot of the N-body simulation.
 
 ---
