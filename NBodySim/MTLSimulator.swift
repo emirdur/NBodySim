@@ -36,7 +36,11 @@ final class MTLSimulator: ObservableObject {
     
     func update() {
         guard let particlesBuffer = particlesBuffer else { return }
-        metalManager?.update(particlesBuffer: particlesBuffer, particleCount: particles.count)
+        
+        let gravitationalConstant: Float = 0.001
+        let dt: Float = 0.016
+        
+        metalManager?.update(particlesBuffer: particlesBuffer, particleCount: particles.count, gravitationalConstant: gravitationalConstant, dt: dt)
         
         // copy back to CPU
         let pointer = particlesBuffer.contents().bindMemory(to: Particle.self, capacity: particles.count)

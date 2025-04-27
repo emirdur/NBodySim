@@ -12,7 +12,6 @@ final class Simulator: ObservableObject {
     @Published var particles: [Particle] = []
     let gravitationalConstant: Float = 0.001
     let dt: Float = 0.016 // 60 fps => 1/60s = 0.016s
-    var timer: Timer?
     
     init(n: Int) {
         self.particles = (0..<n).map {
@@ -30,22 +29,9 @@ final class Simulator: ObservableObject {
                 )
             )
         }
-        
-        start()
     }
-    
-    func start() {
-        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(dt), repeats: true) { [weak self] _ in
-            self?.updateParticles()
-        }
-    }
-    
-    func stop() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    func updateParticles() {
+
+    func update() {
         for i in 0..<particles.count {
             if particles[i].position.x <= 0 || particles[i].position.x >= 500 {
                 particles[i].velocity.x *= -1
@@ -74,9 +60,5 @@ final class Simulator: ObservableObject {
             // x = x + vt
             particles[i].position += particles[i].velocity * dt
         }
-    }
-    
-    deinit {
-        stop()
     }
 }

@@ -28,7 +28,7 @@ final class MetalManager {
         
         do {
             let library = device.makeDefaultLibrary() // loads all metal files
-            if let function = library?.makeFunction(name: "updateParticles") {
+            if let function = library?.makeFunction(name: "update") {
                 pipelineState = try device.makeComputePipelineState(function: function)
             } else {
                 print("Failed to find function.")
@@ -39,7 +39,7 @@ final class MetalManager {
         }
     }
     
-    func update(particlesBuffer: MTLBuffer, particleCount: Int) {
+    func update(particlesBuffer: MTLBuffer, particleCount: Int, gravitationalConstant: Float, dt: Float) {
         guard let commandBuffer = commandQueue.makeCommandBuffer(),
               let encoder = commandBuffer.makeComputeCommandEncoder(),
               let pipelineState = pipelineState else {
@@ -49,9 +49,20 @@ final class MetalManager {
         
         // encoder - prepares the instructions for the GPU (which shader to use, which buffers to use, how to execute the instructions)
         // buffer - the data the GPU will process
-        
         encoder.setComputePipelineState(pipelineState)
         encoder.setBuffer(particlesBuffer, offset: 0, index: 0)
+        
+        var gravitationalConstant = gravitationalConstant
+        var dt = dt
+        var particleCount = particleCount
+
+        let gravitationalConstantBuffer = device.makeBuffer(bytes: &gravitationalConstant, length: MemoryLayout<Float>.size, options: [])
+        let dtBuffer = device.makeBuffer(bytes: &dt, length: MemoryLayout<Float>.size, options: [])
+        let particleCountBuffer = device.makeBuffer(bytes: &particleCount, length: MemoryLayout<UInt32>.size, options: [])
+        
+        encoder.setBuffer(gravitationalConstantBuffer, offset: 0, index: 1)
+        encoder.setBuffer(dtBuffer, offset: 0, index: 2)
+        encoder.setBuffer(particleCountBuffer, offset: 0, index: 3)
         
         let threadGroupSize = min(pipelineState.maxTotalThreadsPerThreadgroup, particleCount) // each particle is allocated a thread, unless you exceed the maximum amount of threads per thread group
         let threadGroups = MTLSize(width: (particleCount + threadGroupSize - 1) / threadGroupSize, height: 1, depth: 1)
