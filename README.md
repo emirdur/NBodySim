@@ -8,12 +8,14 @@ The N-body problem is a classical physics problem that involves simulating the m
 
 The gravitational force between two bodies is given by the following formula:
 
-\[ F = \frac{G \cdot m1 \cdot m2}{r^2} \]
+$$
+F = \frac{G \cdot m_1 \cdot m_2}{r^2}
+$$
 
 Where:
 - \( F \) is the force between the bodies.
 - \( G \) is the gravitational constant.
-- \( m1 \) and \( m2 \) are the masses of the two particles.
+- \( m_1 \) and \( m_2 \) are the masses of the two particles.
 - \( r \) is the distance between the two particles.
 
 ### Tech Stack
@@ -34,7 +36,9 @@ The initial implementation is a CPU-based N-body simulation with 100 particles. 
 - **Simulation Performance**: While running, the CPU is highly utilized, which could slow down the system.
 
 ### Example Graphs:
+<img width="521" alt="Screenshot 2025-04-26 at 10 56 36 PM" src="https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc" />
 - **Figure 1**: CPU usage while running the simulation.
+![Simulator Screenshot - iPhone 14 Pro - 2025-04-26 at 20 50 33](https://github.com/user-attachments/assets/f9fff0f6-d972-4d3b-afa3-79601ea27e7e)
 - **Figure 2**: Screenshot of the N-body simulation.
 
 ---
@@ -51,6 +55,7 @@ In the second task, GPU acceleration is implemented using Metal to offload the c
 The CPU usage drops significantly when using GPU acceleration, and frame computation speeds improve dramatically.
 
 ### Example Graph:
+<img width="524" alt="Screenshot 2025-04-26 at 10 57 49 PM" src="https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6" />
 - **Figure 3**: CPU usage after GPU acceleration is implemented.
 
 ---
@@ -76,5 +81,7 @@ Using an M2 Pro chip, we conducted benchmarks to compare the performance of the 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/n-body-simulation.git
-   cd n-body-simulation
+   git clone https://github.com/emirdur/NBodySim.git
+   cd NBodySim
+
+2. **Open the repository with XCode and enjoy!**
