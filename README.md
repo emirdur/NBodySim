@@ -15,7 +15,7 @@ $$
 Where:
 - \( F \) is the force between the bodies.
 - \( G \) is the gravitational constant.
-- \( m_1 \) and \( m_2 \) are the masses of the two particles.
+- \( $$ m_1 $$ \) and \( $$ m_2 $$ \) are the masses of the two particles.
 - \( r \) is the distance between the two particles.
 
 ### Tech Stack
@@ -36,9 +36,10 @@ The initial implementation is a CPU-based N-body simulation with 100 particles. 
 - **Simulation Performance**: While running, the CPU is highly utilized, which could slow down the system.
 
 ### Example Graphs:
-<img width="521" alt="Screenshot 2025-04-26 at 10 56 36 PM" src="https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc" />
+![Figure 1: CPU usage while running the simulation.](https://github.com/user-attachments/assets/65547bb7-34ca-41a5-9973-faf0af8b18bc)
 - **Figure 1**: CPU usage while running the simulation.
-<img width="364" alt="Screenshot 2025-04-26 at 10 59 40 PM" src="https://github.com/user-attachments/assets/389f86e4-3fb9-474d-ae29-7295cd8d66bc" />
+
+![Figure 2: Screenshot of the N-body simulation.](https://github.com/user-attachments/assets/389f86e4-3fb9-474d-ae29-7295cd8d66bc)
 - **Figure 2**: Screenshot of the N-body simulation.
 
 ---
