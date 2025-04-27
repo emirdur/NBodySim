@@ -8,7 +8,7 @@
 import Foundation
 import simd
 
-final class Simulator: ObservableObject {
+final class Simulator: ObservableObject, SimulatorProtocol {
     @Published var particles: [Particle] = []
     let gravitationalConstant: Float = 0.001
     let dt: Float = 1/120 // 60 fps => 1/60s = 0.016s 120 fps => 1/120s = 0.00833

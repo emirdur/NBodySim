@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var simulator = Simulator(n: 250)
+    @StateObject private var simulator = SimulatorManager(useMetal: true, n: 250)
     
     var body: some View {
         VStack {

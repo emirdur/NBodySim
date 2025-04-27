@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1ADB1E2DBE5F280067553B /* SimulatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1ADB1D2DBE5F280067553B /* SimulatorProtocol.swift */; };
+		CA1ADB222DBE60A30067553B /* SimulatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1ADB212DBE60A30067553B /* SimulatorManager.swift */; };
 		CAD1928D2DBD46C200DF0CDA /* NBodySimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1928C2DBD46C200DF0CDA /* NBodySimApp.swift */; };
 		CAD1928F2DBD46C200DF0CDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1928E2DBD46C200DF0CDA /* ContentView.swift */; };
 		CAD192912DBD46C300DF0CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD192902DBD46C300DF0CDA /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA1ADB1D2DBE5F280067553B /* SimulatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorProtocol.swift; sourceTree = "<group>"; };
+		CA1ADB212DBE60A30067553B /* SimulatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorManager.swift; sourceTree = "<group>"; };
 		CAD192892DBD46C200DF0CDA /* NBodySim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBodySim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD1928C2DBD46C200DF0CDA /* NBodySimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBodySimApp.swift; sourceTree = "<group>"; };
 		CAD1928E2DBD46C200DF0CDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1ADB232DBE61E20067553B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1928E2DBD46C200DF0CDA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA1ADB242DBE61FF0067553B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAD192B62DBD47E100DF0CDA /* Particle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA1ADB252DBE62070067553B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA1ADB212DBE60A30067553B /* SimulatorManager.swift */,
+				CA1ADB1D2DBE5F280067553B /* SimulatorProtocol.swift */,
+				CAD192B82DBD48B900DF0CDA /* Simulator.swift */,
+				CAD192BE2DBD9A5000DF0CDA /* MTLSimulator.swift */,
+				CAD192BA2DBD64FD00DF0CDA /* MetalManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA1ADB262DBE62940067553B /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				CAD192BC2DBD650A00DF0CDA /* Shaders.metal */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
 		CAD192802DBD46C200DF0CDA = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +144,13 @@
 		CAD1928B2DBD46C200DF0CDA /* NBodySim */ = {
 			isa = PBXGroup;
 			children = (
+				CA1ADB262DBE62940067553B /* Shader */,
+				CA1ADB252DBE62070067553B /* Controller */,
+				CA1ADB242DBE61FF0067553B /* Model */,
+				CA1ADB232DBE61E20067553B /* View */,
 				CAD1928C2DBD46C200DF0CDA /* NBodySimApp.swift */,
-				CAD192BA2DBD64FD00DF0CDA /* MetalManager.swift */,
-				CAD192BC2DBD650A00DF0CDA /* Shaders.metal */,
-				CAD1928E2DBD46C200DF0CDA /* ContentView.swift */,
 				CAD192902DBD46C300DF0CDA /* Assets.xcassets */,
 				CAD192922DBD46C300DF0CDA /* Preview Content */,
-				CAD192B62DBD47E100DF0CDA /* Particle.swift */,
-				CAD192B82DBD48B900DF0CDA /* Simulator.swift */,
-				CAD192BE2DBD9A5000DF0CDA /* MTLSimulator.swift */,
 			);
 			path = NBodySim;
 			sourceTree = "<group>";
@@ -276,7 +314,9 @@
 				CAD1928F2DBD46C200DF0CDA /* ContentView.swift in Sources */,
 				CAD192B72DBD47E100DF0CDA /* Particle.swift in Sources */,
 				CAD192B92DBD48B900DF0CDA /* Simulator.swift in Sources */,
+				CA1ADB1E2DBE5F280067553B /* SimulatorProtocol.swift in Sources */,
 				CAD192BF2DBD9A5000DF0CDA /* MTLSimulator.swift in Sources */,
+				CA1ADB222DBE60A30067553B /* SimulatorManager.swift in Sources */,
 				CAD192BB2DBD64FD00DF0CDA /* MetalManager.swift in Sources */,
 				CAD1928D2DBD46C200DF0CDA /* NBodySimApp.swift in Sources */,
 			);

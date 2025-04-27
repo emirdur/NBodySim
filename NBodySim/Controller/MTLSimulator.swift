@@ -9,7 +9,7 @@ import Foundation
 import Metal
 import simd
 
-final class MTLSimulator: ObservableObject {
+final class MTLSimulator: ObservableObject, SimulatorProtocol {
     @Published var particles: [Particle]
     
     private var particlesBuffer: MTLBuffer?
