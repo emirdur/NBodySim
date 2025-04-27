@@ -57,6 +57,7 @@ The CPU usage drops significantly when using GPU acceleration, and frame computa
 
 ### Example Graph:
 ![Figure 3: CPU usage after GPU acceleration is implemented.](https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6)
+- **Figure 3**: CPU usage after GPU acceleration is implemented.
 
 ---
 
