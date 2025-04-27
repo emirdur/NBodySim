@@ -15,7 +15,7 @@ $$
 Where:
 - \( F \) is the force between the bodies.
 - \( G \) is the gravitational constant.
-- \( $$ m_1 $$ \) and \( $$ m_2 $$ \) are the masses of the two particles.
+- \( m_1 \) and \( m_2 \) are the masses of the two particles.
 - \( r \) is the distance between the two particles.
 
 ### Tech Stack
@@ -56,8 +56,7 @@ In the second task, GPU acceleration is implemented using Metal to offload the c
 The CPU usage drops significantly when using GPU acceleration, and frame computation speeds improve dramatically.
 
 ### Example Graph:
-<img width="524" alt="Screenshot 2025-04-26 at 10 57 49 PM" src="https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6" />
-- **Figure 3**: CPU usage after GPU acceleration is implemented.
+![Figure 3: CPU usage after GPU acceleration is implemented.](https://github.com/user-attachments/assets/dd5756f8-fb5f-4757-816d-3eac08cf6be6)
 
 ---
 
