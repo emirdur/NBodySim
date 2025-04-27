@@ -13,6 +13,7 @@ F = \frac{G \cdot m_1 \cdot m_2}{r^2}
 $$
 
 Where:
+
 $$
 \text{- } F \text{ is the force between the bodies.}
 $$
