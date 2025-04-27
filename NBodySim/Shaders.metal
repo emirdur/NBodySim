@@ -20,14 +20,14 @@ struct Particle {
 kernel void update(device Particle* particles [[buffer(0)]], uint id [[thread_position_in_grid]], constant float& gravitationalConstant [[buffer(1)]], constant float& dt [[buffer(2)]], constant uint& particleCount [[buffer(3)]]) {
     if (id >= particleCount) return;
     
-    if (particles[id].position.x <= 0 || particles[id].position.x >= 500) {
+    if (particles[id].position.x <= 0 || particles[id].position.x >= 430) {
         particles[id].velocity.x *= -1;
-        particles[id].position.x = min(max(particles[id].position.x, 0.0), 500.0);
+        particles[id].position.x = min(max(particles[id].position.x, 0.0), 430.0);
     }
     
-    if (particles[id].position.y <= 0 || particles[id].position.y >= 500) {
+    if (particles[id].position.y <= 0 || particles[id].position.y >= 932) {
         particles[id].velocity.y *= -1;
-        particles[id].position.y = min(max(particles[id].position.y, 0.0), 500.0);
+        particles[id].position.y = min(max(particles[id].position.y, 0.0), 932.0);
     }
     
     float2 totalForce = float2(0.0, 0.0);

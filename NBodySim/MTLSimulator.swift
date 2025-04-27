@@ -19,8 +19,8 @@ final class MTLSimulator: ObservableObject {
         self.particles = (0..<n).map {
             _ in Particle(
                 position: SIMD2<Float>(
-                    Float.random(in: 0..<500), // random x vector position [0, 500)
-                    Float.random(in: 0..<500) // random y vector position
+                    Float.random(in: 0..<430), // random x vector position [0, 500)
+                    Float.random(in: 0..<932) // random y vector position
                 ),
                 velocity: SIMD2<Float>(
                     Float.random(in: -10...10), // random x velocity [-10, 10]
@@ -38,12 +38,20 @@ final class MTLSimulator: ObservableObject {
         guard let particlesBuffer = particlesBuffer else { return }
         
         let gravitationalConstant: Float = 0.001
-        let dt: Float = 0.016
+        let dt: Float = 1/120
+        
+        
+        let start = DispatchTime.now()
         
         metalManager?.update(particlesBuffer: particlesBuffer, particleCount: particles.count, gravitationalConstant: gravitationalConstant, dt: dt)
         
         // copy back to CPU
         let pointer = particlesBuffer.contents().bindMemory(to: Particle.self, capacity: particles.count)
         particles = Array(UnsafeBufferPointer(start: pointer, count: particles.count))
+
+        let end = DispatchTime.now()
+        let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+        let milliSeconds = Double(nanoTime) / 1_000_000
+        print("GPU Frame Time: \(milliSeconds) ms")
     }
 }
